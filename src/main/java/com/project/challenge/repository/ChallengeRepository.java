@@ -1,6 +1,6 @@
-package com.mini_project.challenge_list.repository;
+package com.project.challenge.repository;
 
-import com.mini_project.challenge_list.model.Challenge;
+import com.project.challenge.model.Challenge;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

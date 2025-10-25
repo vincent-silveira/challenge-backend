@@ -1,4 +1,4 @@
-package com.mini_project.challenge_list.model;
+package com.project.challenge.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

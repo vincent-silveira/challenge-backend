@@ -1,7 +1,7 @@
-package com.mini_project.challenge_list.controller;
+package com.project.challenge.controller;
 
-import com.mini_project.challenge_list.model.Challenge;
-import com.mini_project.challenge_list.service.ChallengeService;
+import com.project.challenge.model.Challenge;
+import com.project.challenge.service.ChallengeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +32,7 @@ public class ChallengeController {
         return new ResponseEntity<>(challengeList, HttpStatus.OK);
     }
 
-    // Get Challenge by Id
+    // Get Challenge by ID
     @GetMapping("/id={id}")
     public ResponseEntity<Challenge> getChallenge(@PathVariable long id){
         System.out.println("\nId: " + id + "\n");
@@ -45,7 +45,7 @@ public class ChallengeController {
         return new ResponseEntity<>(challenge, HttpStatus.OK);
     }
 
-    // Save Challenge by Id
+    // Save Challenge by ID
     @PostMapping
     public ResponseEntity<Boolean> addChallenge(@RequestBody Challenge challenge){
         challengeService.addChallenge(challenge);

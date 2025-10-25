@@ -1,4 +1,4 @@
-package com.mini_project.challenge_list.exception.custom;
+package com.project.challenge.exception.custom;
 
 public class ChallengeNotFoundException extends RuntimeException {
     public ChallengeNotFoundException(long id) {

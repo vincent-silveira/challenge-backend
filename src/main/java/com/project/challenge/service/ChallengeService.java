@@ -1,9 +1,9 @@
-package com.mini_project.challenge_list.service;
+package com.project.challenge.service;
 
-import com.mini_project.challenge_list.exception.custom.ChallengeNotFoundException;
-import com.mini_project.challenge_list.exception.custom.FieldEmptyException;
-import com.mini_project.challenge_list.model.Challenge;
-import com.mini_project.challenge_list.repository.ChallengeRepository;
+import com.project.challenge.exception.custom.ChallengeNotFoundException;
+import com.project.challenge.exception.custom.FieldEmptyException;
+import com.project.challenge.model.Challenge;
+import com.project.challenge.repository.ChallengeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class ChallengeService {
         return challengeRepository.findAll();
     }
 
-    // Get Challenge by Id from DB
+    // Get Challenge by ID from DB
     public Challenge getChallenge(long id) {
         Challenge challenge = challengeRepository.findById(id).orElse(null);
         if(challenge == null){
@@ -33,7 +33,7 @@ public class ChallengeService {
         return  challenge;
     }
 
-    // Save Challenge by Id
+    // Save Challenge by ID
     public void addChallenge(Challenge challenge) {
         if((challenge.getMonth() == null || challenge.getMonth().isEmpty()) && (challenge.getDescription() ==null || challenge.getDescription().isEmpty())){
             throw new FieldEmptyException("Month and Description");
