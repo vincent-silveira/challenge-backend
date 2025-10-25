@@ -35,12 +35,9 @@ public class ChallengeController {
     // Get Challenge by ID
     @GetMapping("/id={id}")
     public ResponseEntity<Challenge> getChallenge(@PathVariable long id){
-        System.out.println("\nId: " + id + "\n");
         // Fetch challenge
         Challenge challenge = challengeService.getChallenge(id);
 
-
-        System.out.println(challenge);
         // Return challenge
         return new ResponseEntity<>(challenge, HttpStatus.OK);
     }
